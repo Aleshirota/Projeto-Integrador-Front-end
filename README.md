@@ -14,9 +14,10 @@ O Projeto Integrador "LabEddit" é um site de rede social que possui quatro pág
 - <a href="#passos">Próximos Passos</a>
 
 ## Funcionalidades do Projeto
-- [x] Página Home
-- [x] Página Pokedéx
-- [x] Página de Detalhes
+- [x] Página login
+- [x] Página Signup
+- [x] Página de Post
+- [x] Página de Comentários
 
 ## Layout
 
@@ -27,7 +28,8 @@ O Projeto Integrador "LabEddit" é um site de rede social que possui quatro pág
 
 ## Demonstração
 
-[Link demostração]()
+[Link demostração](
+projeto-integrador-labeddit.surge.sh)
 
 ## Como rodar este projeto?
 
@@ -36,7 +38,7 @@ O Projeto Integrador "LabEddit" é um site de rede social que possui quatro pág
 $ git clone Linkrepo
 
 # Acesse a pasta do projeto no seu terminal
-$ cd Pokedex
+$ cd Labeddit
 
 # Instale as dependencias
 $ npm install
@@ -56,12 +58,14 @@ $ npm run start
 5. [Styled-components]()
 6. [React Context]()
 7. [Axios]()
+8. [JavaScript]()
+8. [React]()
 
 ## Pessoas Autoras
 
 <img style= "hidth:200px" src = "" alt="Imagem do Desenvolvedor">
 
-[Linkedin]()
+[Linkedin](https://www.linkedin.com/in/alexandreshirotaresende/)
 
 ## Proximos passos 
 
