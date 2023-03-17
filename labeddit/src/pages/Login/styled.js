@@ -28,3 +28,11 @@ top: 25px;
 left: 530px
 `;
 
+export const Linha = styled.img`
+
+background: linear-gradient(10deg, rgb(255, 102, 136) 0%, rgb(254, 126, 2) 100%);
+padding: 0.3px;
+
+`;
+
+
