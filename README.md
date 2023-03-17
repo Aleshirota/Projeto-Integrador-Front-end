@@ -28,8 +28,7 @@ O Projeto Integrador "LabEddit" é um site de rede social que possui quatro pág
 
 ## Demonstração
 
-[Link demostração](
-projeto-integrador-labeddit.surge.sh)
+- [Link demostração](https://projeto-integrador-labeddit.surge.sh/)
 
 ## Como rodar este projeto?
 
