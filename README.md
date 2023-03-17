@@ -21,3 +21,10 @@ O Projeto Integrador "LabEddit" é um site de rede social que possui quatro pág
 ## Layout
 
 ![iPhone 13 Pro Max - 5](https://user-images.githubusercontent.com/111313480/226063988-7a7945a0-9eb9-4ab3-a677-fe6b34b6a1f3.jpg)
+![iPhone 13 Pro Max - 2](https://user-images.githubusercontent.com/111313480/226064147-970bd3d6-e9e6-44a3-9ed3-a636096922e7.jpg)
+![iPhone 13 Pro Max - 3](https://user-images.githubusercontent.com/111313480/226064173-c2f39d8c-9588-49fd-96c5-dde806f33b5f.jpg)
+![iPhone 13 Pro Max - 4](https://user-images.githubusercontent.com/111313480/226064189-7597538f-4784-401f-93c2-97955423c847.jpg)
+
+
+
+
