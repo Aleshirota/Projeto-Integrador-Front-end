@@ -12,23 +12,55 @@ import {
     Text,
     useColorModeValue,
     Checkbox, 
-    CheckboxGroup,
     Spinner
     } from '@chakra-ui/react'
 import { useNavigate } from "react-router-dom";
-import { useForm } from "../../hooks/use-form";
 import { Titulo } from "./styled";
-
-
+import { useState } from "react";
+import axios from "axios"
+import { BASE_URL } from "../../constants/url";
+import { goToLogin } from "../../routes/coordinator";
 
 export const Signup = () => {
-    const navigate = useNavigate();
-    const [form, onChangeInputs, clearInputs] = useForm({
-        email: "",
-        password: ""
-    })
-    return (
 
+  const [showPassword, setShowPassword] = useState(false);
+
+    const navigate = useNavigate();
+    
+    const [isLoading, setIsLoading] = useState(false);
+
+    const [form, setForm] = useState({
+      name: "",
+      email: "",
+      password: ""
+    });
+
+    const changeForm = (event) => {
+      setForm({ ...form, [event.target.name]: event.target.value });
+    };
+
+    const signupPage = async () => {
+      try {
+        setIsLoading(true);
+  
+        const body = {
+          name: form.name,
+          email: form.email,
+          password: form.password
+        };
+  
+        const response = await axios.post(BASE_URL + "/users/signup", body);
+        window.localStorage.setItem("labeddit-token", response.data.token);
+  window.alert("conta criada com sucesso")
+        setIsLoading(false);
+        goToLogin(navigate);
+      } catch (error) {
+        setIsLoading(false);
+        console.error(error?.response?.data?.message); 
+        window.alert("Erro ao cadastrar conta! Veja o console");
+      }
+    };
+    return (
         <>
             <Header />
             
@@ -50,31 +82,33 @@ export const Signup = () => {
           p={8}
         >
           <Stack spacing={4}>
-            <FormControl id="apelido">
+            <FormControl id="firstName" isRequired>
               <FormLabel>Apelido</FormLabel>
               <Input
-                type="apelido"
+                type="text"
                 autoComplete="off"
-                name="apelido"
-                onChange={onChangeInputs}
+                name="name"
+                onChange={changeForm}
               />
             </FormControl>
-            <FormControl id="email">
+            <FormControl id="email" isRequired>
               <FormLabel>Email</FormLabel>
               <Input
                 type="email"
                 autoComplete="off"
                 name="email"
-                onChange={onChangeInputs}
+                onChange={changeForm}
               />
             </FormControl>
-            <FormControl id="senha">
+            <FormControl id="password" isRequired>
               <FormLabel>Senha</FormLabel>
-              <Input type="senha" 
-              name="senha"
-               onChange={onChangeInputs} />
+              <Input 
+             type={showPassword ? "text" : "password"}
+              name="password"
+               onChange={changeForm} 
+               />
             </FormControl>
-
+           
             <Stack pt={6}>
               <Text align={"center"}>
                 Ao continuar, você concorda com o nosso {" "}
@@ -102,7 +136,7 @@ export const Signup = () => {
             <Stack spacing={10}>
              
               <Button
-                // onClick={login}
+                onClick={signupPage}
                 w='365px' 
                 h='51px' 
                 color={"white"}
@@ -113,19 +147,13 @@ export const Signup = () => {
                   bg: "orange.500"
                 }}
               >
-                {/* {isLoading ? <Spinner /> : "Entrar"} */}
-                Cadastrar
-                
+                {isLoading ? <Spinner /> : "Cadastrar"}
               </Button>
-            
             </Stack>
-          
           </Stack>
         </Box>
       </Stack>
     </Flex>
-
         </>
     )
-
 }

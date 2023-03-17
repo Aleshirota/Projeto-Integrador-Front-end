@@ -1,6 +1,6 @@
 import { Entrar, HeaderStyled, LogoLabenu, Logout } from "./styled"
 import { Button, Link } from '@chakra-ui/react'
-import { goToSignup } from "../../routes/coordinator"
+import { goToLogin, goToSignup } from "../../routes/coordinator"
 import logoLabenu from "../../assets/Group 3.png"
 import { useLocation, useNavigate } from "react-router-dom"
 
@@ -22,7 +22,7 @@ export const Header = () => {
 
                         <div className="action-menu">
                             <Link
-                                //   onClick={() => goToSignup(navigate)}
+                                  onClick={() => goToLogin(navigate)}
                                 color={"blue.400"}
                             >
                                 <Entrar>
@@ -42,6 +42,7 @@ export const Header = () => {
 
                         <div className="action-menu">
                             <Link
+                             onClick={() => goToLogin(navigate)}
                                 //   onClick={() => goToSignup(navigate)}
                                 color={"blue.400"}
                             >
@@ -63,6 +64,7 @@ export const Header = () => {
 
                         <div className="action-menu">
                             <Link
+                            onClick={() => goToLogin(navigate)}
                                 //   onClick={() => goToSignup(navigate)}
                                 color={"blue.400"}
                             >

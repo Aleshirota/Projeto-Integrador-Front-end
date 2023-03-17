@@ -11,7 +11,7 @@ return(
     <BrowserRouter>
     {/* <Header/> */}
     <Routes>
-        <Route path = "/login" element={<Login/>}/>
+        <Route path = "/" element={<Login/>}/>
         <Route path = "/signup" element={<Signup/>}/>
         <Route path = "/feed" element={<Feed/>}/>
         <Route path = "/post" element={<Post/>}/>
