@@ -64,7 +64,7 @@ $ npm run start
 
 <img style= "hidth:200px" src = "" alt="Imagem do Desenvolvedor">
 
-[Linkedin](https://www.linkedin.com/in/alexandreshirotaresende/)
+- [Linkedin](https://www.linkedin.com/in/alexandreshirotaresende/)
 
 ## Proximos passos 
 
