@@ -37,7 +37,7 @@ O Projeto Integrador "LabEddit" é um site de rede social que possui quatro pág
 $ git clone Linkrepo
 
 # Acesse a pasta do projeto no seu terminal
-$ cd Labeddit
+$ cd labeddit
 
 # Instale as dependencias
 $ npm install
