@@ -66,7 +66,7 @@ $ npm run start
 
 - [Linkedin](https://www.linkedin.com/in/alexandreshirotaresende/)
 
-## Segue abaixo o Link do Repositório do meu Back-end
+## Segue abaixo o Link do meu Repositório Back-end:
 
 - [Projeto Back-end](https://github.com/Aleshirota/Projeto-Integrador-Back-end)
 
